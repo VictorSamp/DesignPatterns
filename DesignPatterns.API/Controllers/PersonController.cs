@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace DesignPatterns.API.Controllers
 {
     [Route("api/[controller]")]
@@ -9,8 +7,8 @@ namespace DesignPatterns.API.Controllers
     public class PersonController : ControllerBase
     {
         // GET: api/<PersonController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("person")]
+        public IEnumerable<string> Get([FromBody] string personId)
         {
             return new string[] { "value1", "value2" };
         }

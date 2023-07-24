@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Domain.Entities
 {
-    internal class Address
+    public class Address
     {
         public Guid Id { get; init; }
         public string Street { get; private set; }
