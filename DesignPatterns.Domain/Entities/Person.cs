@@ -1,6 +1,4 @@
-﻿using DesignPatterns.Domain.Commands.Requests;
-
-namespace DesignPatterns.Domain.Entities
+﻿namespace DesignPatterns.Domain.Entities
 {
     internal class Person
     {
@@ -19,16 +17,6 @@ namespace DesignPatterns.Domain.Entities
             Email = email;
             BirthDate = birthDate;
             Address = address;
-        }
-
-        public Person(CreatePersonRequestCommand command)
-        {
-            Id = Guid.NewGuid();
-            Name = command.Name;
-            LastName = command.LastName;
-            Email = command.Email;
-            BirthDate = command.BirthDate;
-            Address = command.Address;
         }
     }
 }
